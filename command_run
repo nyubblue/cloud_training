@@ -1,0 +1,3 @@
+./create.sh myInfrastructure my_infra.yml ourinfra-params.json
+
+./update.sh myInfrastructure my_infra.yml ourinfra-params.json
