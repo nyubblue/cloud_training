@@ -265,6 +265,7 @@ Resources:
           sudo apt-get install apache2 -y
           sudo systemctl start apache2.service
           cd /var/www/html
+          sudo rm index.html
           sudo snap install aws-cli --classic
           aws s3 cp s3://my264928703295bucket/indexarch.zip .
           sudo apt install unzip
@@ -287,8 +288,8 @@ Resources:
         - Ref: PrivateSubnet2
       LaunchConfigurationName:
         Ref: WebAppLaunchConfig
-      MinSize: "2"
-      MaxSize: "2"
+      MinSize: "4"
+      MaxSize: "4"
       TargetGroupARNs:
         - Ref: WebAppTargetGroup
 
